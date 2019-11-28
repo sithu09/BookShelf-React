@@ -1,7 +1,7 @@
 import React from 'react';
-import Stuff from './Stuff';
-import About from './About';
-import Home from './Home';
+import Shortnovel from './Js/Shortnovel';
+import Novel from './Js/Novel';
+import Knowledge from './Js/Knowledge';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -25,9 +25,9 @@ export default function App() {
                 <hr></hr>
            <h3><Link to={'/'} >ဝတ္ထုတို</Link></h3>
            <hr></hr>
-           <h3> <Link to={'/contact'} >ဝတ္ထုရှည်</Link></h3>
+           <h3> <Link to={'/novel'} >ဝတ္ထုရှည်</Link></h3>
            <hr></hr>
-           <h3><Link to={'/about'} > သုတ</Link></h3> 
+           <h3><Link to={'/knowledge'} > သုတ</Link></h3> 
            <hr></hr>
            <h3><Link to={'/about'} > ရသ/အက်ဆေး</Link></h3> 
            <hr></hr>
@@ -60,9 +60,9 @@ export default function App() {
           <Switch>
             <div class="col-9">
               <div className="showpage">
-              <Route exact path='/' component={Home} />
-              <Route path='/contact' component={Stuff} />
-              <Route path='/about' component={About} />
+              <Route exact path='/' component={Shortnovel} />
+              <Route exact path='/novel' component={Novel} />
+              <Route exact path='/knowledge' component={Knowledge} />
               </div>
               </div>
           </Switch>
